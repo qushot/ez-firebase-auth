@@ -8,3 +8,8 @@ Firebase Authentication を使って Google ログインし、ユーザのアク
 - `go run main.go` でサーバーを起動します。
 - ブラウザから http://localhost:3000 にアクセスします。
 - ログインすると、画面にログインしたユーザーのアクセストークンが JWT で表示されます。
+
+## その他
+
+- トークンの検証: https://jwt.io
+- kid に紐づく公開鍵の取得先 :https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com
