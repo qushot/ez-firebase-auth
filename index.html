@@ -10,7 +10,7 @@
     <div id="jwt"></div>
 
     <button id="login">Login</button>
-    <button id="logout">Logout</button>
+    <button id="logout" style="display: none">Logout</button>
 
     <!-- MUST BE LAST THIS -->
     <script type="module">
@@ -59,6 +59,8 @@
             // ...
             console.log({ user });
             document.getElementById("jwt").innerText = user.accessToken;
+            document.getElementById("login").style.display = "none";
+            document.getElementById("logout").style.display = "inline";
           })
           .catch((error) => {
             // Handle Errors here.
@@ -77,6 +79,10 @@
           .then(() => {
             // Sign-out successful.
             console.log("logout");
+
+            document.getElementById("jwt").innerText = "";
+            document.getElementById("login").style.display = "inline";
+            document.getElementById("logout").style.display = "none";
           })
           .catch((error) => {
             // An error happened.
